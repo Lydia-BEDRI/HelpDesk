@@ -1,0 +1,23 @@
+# IDE et systeme
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+*.swp
+.DS_Store
+Thumbs.db
+
+# Variables et secrets locaux
+.env
+.env.*
+!.env.example
+
+# Logs et fichiers temporaires
+*.log
+tmp/
+coverage/
+
+# Artefacts des sous-projets
+backend/target/
+frontend/node_modules/
+frontend/dist/

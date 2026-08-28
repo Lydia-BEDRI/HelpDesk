@@ -1,0 +1,10 @@
+target/
+.mvn/
+!.mvn/wrapper/
+*.class
+*.jar
+*.war
+hs_err_pid*
+spring.log
+.env
+!.env.example
