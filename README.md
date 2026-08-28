@@ -13,6 +13,18 @@ docs/      documentation technique
 
 ## Démarrage
 
-Le projet est en phase de conception. Les instructions de lancement seront ajoutées avec le MVP et Docker Compose.
+Le socle Docker Compose démarre actuellement PostgreSQL. Le backend et le frontend seront ajoutés progressivement.
+
+```bash
+cp .env.example .env
+docker compose up -d
+docker compose ps
+```
+
+Pour arrêter les conteneurs :
+
+```bash
+docker compose down
+```
 
 Consulter [cdc.md](docs/cdc.md) pour le périmètre, les règles métier et l'ordre de développement.
