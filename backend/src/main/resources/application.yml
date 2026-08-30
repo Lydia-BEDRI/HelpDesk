@@ -18,7 +18,7 @@ springdoc:
     operationsSorter: method
 
 jwt:
-  secret: ${JWT_SECRET:helpdesk-secret-key-for-development-only-1234567890}
+  secret: ${JWT_SECRET:replace-me-with-a-random-jwt-secret-of-at-least-32-bytes}
   expiration-ms: ${JWT_EXPIRATION_MS:3600000}
 
 server:
