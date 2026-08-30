@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: helpdesk-backend
+  datasource:
+    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${POSTGRES_DB:helpdesk}
+    username: ${POSTGRES_USER:helpdesk}
+    password: ${POSTGRES_PASSWORD:helpdesk_dev}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    operationsSorter: method
+
+jwt:
+  secret: ${JWT_SECRET:replace-me-with-a-random-jwt-secret-of-at-least-32-bytes}
+  expiration-ms: ${JWT_EXPIRATION_MS:3600000}
+
+server:
+  port: ${SERVER_PORT:8080}

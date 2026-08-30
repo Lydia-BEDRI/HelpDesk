@@ -13,6 +13,20 @@ docs/      documentation technique
 
 ## Démarrage
 
-Le projet est en phase de conception. Les instructions de lancement seront ajoutées avec le MVP et Docker Compose.
+Le backend Spring Boot est initialisé et PostgreSQL est lancé par Docker Compose.
+
+```bash
+cp .env.example .env
+docker compose up -d
+docker compose ps
+```
+
+L'API sera accessible sur <http://localhost:8080> lorsque les premiers endpoints seront ajoutés.
+
+Pour arrêter les conteneurs :
+
+```bash
+docker compose down
+```
 
 Consulter [cdc.md](docs/cdc.md) pour le périmètre, les règles métier et l'ordre de développement.
