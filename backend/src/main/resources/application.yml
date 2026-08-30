@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: helpdesk-backend
+  datasource:
+    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${POSTGRES_DB:helpdesk}
+    username: ${POSTGRES_USER:helpdesk}
+    password: ${POSTGRES_PASSWORD:helpdesk_dev}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+
+server:
+  port: ${SERVER_PORT:8080}
