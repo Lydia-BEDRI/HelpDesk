@@ -38,13 +38,13 @@ public class AuthService {
             throw new IllegalArgumentException("Email already exists");
         }
 
-        User user = new User(
-                request.firstName(),
-                request.lastName(),
-                request.email(),
-                passwordEncoder.encode(request.password()),
-                UserRole.EMPLOYEE
-        );
+        User user = User.builder()
+                .firstName(request.firstName())
+                .lastName(request.lastName())
+                .email(request.email())
+                .password(passwordEncoder.encode(request.password()))
+                .role(UserRole.EMPLOYEE)
+                .build();
 
         User savedUser = userRepository.save(user);
         String token = jwtService.generateToken(savedUser);
