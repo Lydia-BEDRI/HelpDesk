@@ -10,5 +10,16 @@ spring:
       ddl-auto: update
     open-in-view: false
 
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    operationsSorter: method
+
+jwt:
+  secret: ${JWT_SECRET:helpdesk-secret-key-for-development-only-1234567890}
+  expiration-ms: ${JWT_EXPIRATION_MS:3600000}
+
 server:
   port: ${SERVER_PORT:8080}
